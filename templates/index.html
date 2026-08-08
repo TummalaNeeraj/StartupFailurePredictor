@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Startup Failure Predictor</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            background: #222;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Startup Failure Predictor</h1>
+
+        <p class="tagline">
+            Learn from failed startups before building yours.
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <div class="form-group">
+                <label>Funding Amount</label>
+                <input type="number" name="funding" required>
+            </div>
+
+            <div class="form-group">
+                <label>Number of Employees</label>
+                <input type="number" name="employees" required>
+            </div>
+
+            <div class="form-group">
+                <label>Founder Experience (Years)</label>
+                <input type="number" step="0.1" name="experience" required>
+            </div>
+
+            <div class="form-group">
+                <label>Company Age (Years)</label>
+                <input type="number" step="0.1" name="company_age" required>
+            </div>
+
+            <div class="form-group">
+                <label>Revenue</label>
+                <input type="number" name="revenue" required>
+            </div>
+
+            <div class="form-group">
+                <label>Expenses</label>
+                <input type="number" name="expenses" required>
+            </div>
+
+            <div class="form-group">
+                <label>Market Size</label>
+                <input type="number" name="market_size" required>
+            </div>
+
+            <div class="form-group">
+                <label>Customer Growth (%)</label>
+                <input type="number" step="0.1" name="customer_growth" required>
+            </div>
+
+            <button type="submit">
+                Predict Startup Success
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
